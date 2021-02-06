@@ -34,8 +34,8 @@ public class OrgaoVinculado implements Serializable {
     @JoinColumn(name = "orgao_maximo_codigo_fk")
     public OrgaoMaximo orgaoMaximo;
 
-    @OneToMany(mappedBy = "orgaoVinculado")
-    private List<UnidadeGestora> unidadesGestoras;
+//    @OneToMany(mappedBy = "orgaoVinculado")
+//    private List<UnidadeGestora> unidadesGestoras;
 
     @Override
     public int hashCode(){

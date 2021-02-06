@@ -25,8 +25,8 @@ public class UnidadeGestora implements Serializable {
     @JoinColumn(name = "orgao_vinculado_cnpj_fk")
     public OrgaoVinculado orgaoVinculado;
 
-    @OneToMany(mappedBy = "unidadeGestora")
-    private List<Gasto> gastos;
+//    @OneToMany(mappedBy = "unidadeGestora")
+//    private List<Gasto> gastos;
 
     @Override
     public int hashCode(){

@@ -56,6 +56,7 @@ public class ExecucaoController {
         headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
         headers.add("Pragma", "no-cache");
         headers.add("Expires", "0");
+        headers.add("Content-Disposition", "attachment;filename=\""+ execucao.getNomeArquivo() +"\"");
 
         System.out.println(execucao);
 

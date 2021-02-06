@@ -27,8 +27,8 @@ public class NaturezaJuridica implements Serializable {
     @Column(name = "descricao_tipo")
     public String descricaoTipo;
 
-    @OneToMany(mappedBy = "naturezaJuridica")
-    List<Estabelecimento> estabelecimentos;
+//    @OneToMany(mappedBy = "naturezaJuridica")
+//    List<Estabelecimento> estabelecimentos;
 
     @Override
     public int hashCode(){

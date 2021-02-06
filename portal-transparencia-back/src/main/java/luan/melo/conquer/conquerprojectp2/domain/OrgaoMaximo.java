@@ -24,8 +24,8 @@ public class OrgaoMaximo implements Serializable {
     @Column(name = "sigla")
     public String sigla;
 
-    @OneToMany(mappedBy = "orgaoMaximo")
-    private List<OrgaoVinculado> orgaoVinculados;
+//    @OneToMany(mappedBy = "orgaoMaximo")
+//    private List<OrgaoVinculado> orgaoVinculados;
 
     @Override
     public int hashCode(){

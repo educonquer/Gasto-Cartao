@@ -21,8 +21,8 @@ public class Uf implements Serializable {
     @Column(name = "nome", unique = true)
     public String nome;
 
-    @OneToMany(mappedBy = "uf")
-    List<Municipio> municipios;
+//    @OneToMany(mappedBy = "uf")
+//    List<Municipio> municipios;
 
     @Override
     public int hashCode(){

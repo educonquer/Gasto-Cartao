@@ -28,8 +28,8 @@ public class Municipio implements Serializable {
     @JoinColumn(name = "uf_sigla_fk")
     public Uf uf;
 
-    @OneToMany(mappedBy = "municipio")
-    List<Estabelecimento> estabelecimentos;
+//    @OneToMany(mappedBy = "municipio")
+//    List<Estabelecimento> estabelecimentos;
 
     @Override
     public int hashCode(){

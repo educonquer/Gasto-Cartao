@@ -21,8 +21,8 @@ public class Portador implements Serializable {
     @Column(name = "nome")
     public String nome;
 
-    @OneToMany(mappedBy = "portador")
-    private List<Gasto> gastos;
+//    @OneToMany(mappedBy = "portador")
+//    private List<Gasto> gastos;
 
     @Override
     public int hashCode(){

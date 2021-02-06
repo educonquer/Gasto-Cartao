@@ -24,8 +24,8 @@ public class TipoCartao implements Serializable {
     @Column(name = "descricao")
     public String descricao;
 
-    @OneToMany(mappedBy = "tipoCartao")
-    private List<Gasto> gastos;
+//    @OneToMany(mappedBy = "tipoCartao")
+//    private List<Gasto> gastos;
 
     @Override
     public int hashCode(){

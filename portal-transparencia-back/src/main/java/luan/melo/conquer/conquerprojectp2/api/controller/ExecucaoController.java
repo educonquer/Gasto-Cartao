@@ -36,7 +36,7 @@ public class ExecucaoController
     }
 
     @ApiOperation(value = "Gastos por meio de cartão de pagamento")
-    @RequestMapping(path = "/consultar", method = RequestMethod.GET)
+        @RequestMapping(path = "/consultar", method = RequestMethod.GET)
     public Execucao get(@RequestParam("mesExtratoInicio") String mesExtratoInicio,
                         @RequestParam("mesExtratoFim") Optional<String> mesExtratoFim) throws Exception {
         Date date = new Date();

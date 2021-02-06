@@ -75,8 +75,8 @@ public class Estabelecimento implements Serializable {
     @JoinColumn(name = "natureza_juridica_codigo_fk")
     public NaturezaJuridica naturezaJuridica;
 
-    @OneToMany(mappedBy = "estabelecimento")
-    private List<Gasto> gastos;
+//    @OneToMany(mappedBy = "estabelecimento")
+//    private List<Gasto> gastos;
 
     @Override
     public int hashCode(){

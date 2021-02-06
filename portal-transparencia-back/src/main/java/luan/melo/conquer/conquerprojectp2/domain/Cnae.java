@@ -45,8 +45,8 @@ public class Cnae implements Serializable {
     @Column(name = "subclasse")
     public String subclasse;
 
-    @OneToMany(mappedBy = "cnae")
-    List<Estabelecimento> estabelecimentos;
+//    @OneToMany(mappedBy = "cnae")
+//    List<Estabelecimento> estabelecimentos;
 
     @Override
     public int hashCode(){
