@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<section class="layout-content" layout:fragment="corpo">
+
+    <nav class="navbar navbar-expand-md bg-light">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <i class="oi oi-caret-right"></i>
+                    <span>Resultados e Status</span>
+                </li>
+            </ul>
+            <a class="btn btn-primary btn-md" href="/execucao/cadastrar" role="button">
+                <span class="oi oi-plus" title="Cadastro" aria-hidden="true"></span>
+                <span>Nova Consulta</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container" id="listagem">
+
+        <div th:replace="fragments/alert"></div>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-sm">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Execucao</th>
+                    <th>Mes Extrato Inicial</th>
+                    <th>Mes Extrato Final</th>
+                    <th>Status</th>
+                    <th>CSV</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="d : ${execucao}">
+                        <td th:text="${d.id}"></td>
+                        <td th:text="${d.idExecucao}">3</td>
+                        <td th:text="${d.mesExtratoInicio}">11/2020</td>
+                        <td th:text="${d.mesExtratoFim}">11/2020</td>
+                        <td th:text="${d.status}">11/2020</td>
+                        <td colspan="1">
+                            <a class="btn btn-info btn-sm" th:href="@{/execucao/csv/{id} (id=${d.id})}" role="button">
+                                <span class="oi oi-brush" title="Baixar" aria-hidden="true"></span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div th:replace="fragments/modal :: modal"></div>
+</section>
+</body>
+</html>		
